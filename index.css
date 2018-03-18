@@ -41,6 +41,7 @@ div.clockArea {
     0 0 0 0.5rem #cf6a87,
     0 0 0 1rem #c44569;
   position: relative;
+  transform: translateY(-3px);
 }
 
 .hand {
@@ -52,4 +53,11 @@ div.clockArea {
   transform-origin: 100%; /* without this, will rotate from the center */
   transform: rotate(90deg);
   transition: all 0.05s;
+}
+
+.second {
+  background-color: #ffa801;
+}
+.minute {
+  background-color: #3c40c6;
 }
