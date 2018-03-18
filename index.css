@@ -1,0 +1,43 @@
+html,body {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-family: monospace;
+  background: #d2dae2;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+header {
+  border: 1px black solid;
+}
+header .title {
+  color: #1e272e;
+  padding-left: 5rem;
+}
+
+footer {
+  border: 1px red solid;
+  text-align: right;
+  padding-right: 2rem;
+}
+
+div.clockArea {
+  height: 70%;
+  border: 1px blue dotted;
+  margin: 40px auto;
+}
+
+.clock {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 0.5rem #cf6a87 inset,
+    0 0 0 1rem #c44569 inset;
+}
