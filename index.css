@@ -38,6 +38,18 @@ div.clockArea {
   height: 20rem;
   border-radius: 50%;
   box-shadow:
-    0 0 0 0.5rem #cf6a87 inset,
-    0 0 0 1rem #c44569 inset;
+    0 0 0 0.5rem #cf6a87,
+    0 0 0 1rem #c44569;
+  position: relative;
+}
+
+.hand {
+  width: 50%;
+  height: 6px;
+  background: black;
+  position: absolute;
+  top: 50%;
+  transform-origin: 100%; /* without this, will rotate from the center */
+  transform: rotate(90deg);
+  transition: all 0.05s;
 }
