@@ -3,7 +3,7 @@ html,body {
   padding: 0;
   font-size: 18px;
   font-family: monospace;
-  background: #d2dae2;
+  background: #2EC4B6;
 }
 
 body {
@@ -14,29 +14,34 @@ body {
 }
 
 header {
-  border: 1px black solid;
-}
-header .title {
-  color: #1e272e;
-  padding-left: 5rem;
+  display: flex;
+  justify-content: space-between;
 }
 
+header .title {
+  color: #011627;
+  margin-left: 4rem;
+}
+
+header .digitalTime {
+  margin: 2rem 2rem 0 0;
+}
+
+
 footer {
-  border: 1px red solid;
   text-align: right;
   padding-right: 2rem;
 }
 
 div.clockArea {
   height: 70%;
-  border: 1px blue dotted;
   margin: 40px auto;
 }
 
 .clock {
   width: 20rem;
   height: 20rem;
-  border-radius: 50%;
+  border-radius: 30%;
   box-shadow:
     0 0 0 0.5rem #cf6a87,
     0 0 0 1rem #c44569;
@@ -47,16 +52,17 @@ div.clockArea {
 .hand {
   width: 50%;
   height: 6px;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
   background: black;
   position: absolute;
   top: 50%;
   transform-origin: 100%; /* without this, will rotate from the center */
   transform: rotate(90deg);
-  transition: all 0.05s;
 }
 
 .second {
-  background-color: #ffa801;
+  background-color: #E71D36;
 }
 .minute {
   background-color: #3c40c6;
