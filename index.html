@@ -66,6 +66,14 @@
       }
       setInterval(setDate,1000);
 
+      // change background color
+      const input = document.querySelector('input#base');
+      input.addEventListener('change', handleInputChange);
+      function handleInputChange(){
+        console.log(this.value);
+        console.log(this.name);
+        document.documentElement.style.setProperty(`--${this.name}`, this.value);
+      }
     </script>
   </body>
 </html>
