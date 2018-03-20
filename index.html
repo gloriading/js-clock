@@ -10,8 +10,12 @@
     <header>
       <div class="title">
         <h1>JS & CSS Clock</h1>
-        <label for="base">change background color</label>
-        <input id="base" type="color" name="base" value="#2EC4B6">
+        <div class="controls">
+          <label for="bgmain"><span>◓</span> set background color</label>
+          <input id="bgmain" type="color" name="bgmain" value="#2EC4B6">
+          <label for="bgclock"><span>◑</span> set clock color</label>
+          <input id="bgclock" type="color" name="bgclock" value="#FFDAB9">
+        </div>
       </div>
       <div class="digitalTime">
         <span id="digital"></span>
@@ -67,8 +71,9 @@
       setInterval(setDate,1000);
 
       // change background color
-      const input = document.querySelector('input#base');
-      input.addEventListener('change', handleInputChange);
+      const inputs = document.querySelectorAll('.controls input');
+      inputs.forEach(input => input.addEventListener('change', handleInputChange));
+
       function handleInputChange(){
         console.log(this.value);
         console.log(this.name);
