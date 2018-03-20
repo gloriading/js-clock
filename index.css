@@ -33,8 +33,36 @@ header .title {
   margin-left: 4rem;
 }
 
+header p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
 header .controls {
-  font-size: 0.8em;
+  border-left: 3px black dashed;
+  position: absolute;
+  top: 25%;
+  right: 2%;
+  width: 300px;
+  z-index: 999;
+  padding: 10px 5px;
+  font-size: 0.8rem;
+}
+
+.hide {
+  display: none;
+}
+
+#controlPanel {
+  color: whitesmoke;
+  font-size: 0.8rem;
+}
+
+#controlPanel:hover {
+  cursor: pointer;
+}
+.controls input{
+  margin-bottom: 10px;
 }
 
 .title h1 {

@@ -4,23 +4,31 @@
     <meta charset="utf-8">
     <title>JS Clock</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="index.css">
   </head>
   <body>
     <header>
       <div class="title">
         <h1>JS & CSS Clock</h1>
-        <div class="controls">
-          <label for="bgmain"><span>◓</span> background color</label>
-          <input id="bgmain" type="color" name="bgmain" value="#2EC4B6">
-          <label for="bgclock"><span>◑</span> clock color</label>
-          <input id="bgclock" type="color" name="bgclock" value="#FFDAB9">
-          <label for="clockshape"><span>◓</span> clock shape</label>
-          <input id="clockshape" type="range" name="clockshape" min="0" max="50" value="30" data-sizing="%">
-        </div>
       </div>
       <div class="digitalTime">
         <span id="digital"></span>
+        <p id="controlPanel">
+          <i class="fas fa-wrench"></i>
+          control panel
+        </p>
+        <div class="controls hide">
+          <label for="bgmain"><span>◓</span> background color</label>
+          <input id="bgmain" type="color" name="bgmain" value="#2EC4B6">
+          <br>
+          <label for="bgclock"><span>◑</span> clock color</label>
+          <input id="bgclock" type="color" name="bgclock" value="#FFDAB9">
+          <br>
+          <label for="clockshape"><span>◓</span> clock shape</label>
+          <input id="clockshape" type="range" name="clockshape" min="0" max="50" value="30" data-sizing="%">
+        </div>
       </div>
     </header>
     <div class="clockArea">
@@ -82,6 +90,12 @@
         const suffix = this.dataset.sizing || '';
         document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
       }
+
+      const controlPanel = document.querySelector('#controlPanel');
+      const controlBox = document.querySelector('div.controls');
+      controlPanel.addEventListener('click', function(){
+        controlBox.classList.toggle('hide');
+      })
     </script>
   </body>
 </html>
