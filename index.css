@@ -1,6 +1,7 @@
 :root {
   --bgmain: #2EC4B6;
   --bgclock: #FFDAB9;
+  --clockshape: 30%;
 }
 
 html,body {
@@ -32,6 +33,10 @@ header .title {
   margin-left: 4rem;
 }
 
+header .controls {
+  font-size: 0.8em;
+}
+
 .title h1 {
   margin-bottom: 5px;
 }
@@ -60,7 +65,7 @@ div.clockArea {
   background-color: var(--bgclock);
   width: 15rem;
   height: 15rem;
-  border-radius: 30%;
+  border-radius: var(--clockshape);
   box-shadow:
     0 0 0 0.5rem #cf6a87,
     0 0 0 1rem #c44569;
